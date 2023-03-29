@@ -2,7 +2,7 @@
 # OzCar
 This is from a school Assesment. It searches cars through a website using python backend and a webbased frontend 
 
-#How to Run
+# How to Run
 To install the needed dependencies run  
 `pip install -r requirements.txt`
 in the project directory. For Example `pip install -r /Users/User/Downloads/GitHub/Ozcar/requirements.txt`
