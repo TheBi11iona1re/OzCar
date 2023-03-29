@@ -9,5 +9,7 @@ in the project directory. For Example `pip install -r /Users/User/Downloads/GitH
 
 Then when you are in your IDE run oz_car_website.py the website will then work by going to http://127.0.0.1:5000 , only use main.py for a terminal based interface
 
-# Read the Docs
-Main Documentation is at https://thing-1.gitbook.io/ozcar_documentation/
+# Video of it working
+https://www.youtube.com/watch?v=wL3pyCE8JRM
+
+
