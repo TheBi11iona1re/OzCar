@@ -1,0 +1,95 @@
+{% extends "base.html" %}
+{% block title %}Home Page{% endblock %}
+{% block content %}
+<h1>&nbsp Select Brand</h1>
+<html>
+<head>
+
+	<form action="http://127.0.0.1:5000/big_data_two" method="post" style="display: inline-block;">
+		<input type="hidden" name="submit_button" value="Sort Model">
+		<button type="submit" class="btn btn-success" style="margin-left: 20px; width: 200px;"> Sort Model </button>
+	  </form>
+
+	<title>&nbsp Post Input Drop Down Menu</title>
+</head>
+<body>
+	<form action="/big_data" method="POST" style="margin-left: 20px;">
+		<label for="brand">Select a brand:</label>
+		<select id="brand" name="brand">
+			<option value="Abarth">Abarth</option>
+			<option value="Alfa Romeo">Alfa Romeo</option>
+			<option value="Aston Martin">Aston Martin</option>
+			<option value="Audi">Audi</option>
+			<option value="BMW">BMW</option>
+			<option value="Bentley">Bentley</option>
+			<option value="Chery">Chery</option>
+			<option value="Chevrolet">Chevrolet</option>
+			<option value="Chrysler">Chrysler</option>
+			<option value="Citroen">Citroen</option>
+			<option value="Cupra">Cupra</option>
+			<option value="Dodge">Dodge</option>
+			<option value="FPV">FPV</option>
+			<option value="Fiat">Fiat</option>
+			<option value="Ford">Ford</option>
+			<option value="Foton">Foton</option>
+			<option value="GWM">GWM</option>
+			<option value="Genesis">Genesis</option>
+			<option value="Great Wall">Great Wall</option>
+			<option value="HSV">HSV</option>
+			<option value="Haval">Haval</option>
+			<option value="Hino">Hino</option>
+			<option value="Holden">Holden</option>
+			<option value="Honda">Honda</option>
+			<option value="Hyundai">Hyundai</option>
+			<option value="Infiniti">Infiniti</option>
+			<option value="Isuzu">Isuzu</option>
+			<option value="Iveco">Iveco</option>
+			<option value="Jaguar">Jaguar</option>
+			<option value="Jeep">Jeep</option>
+			<option value="Kia">Kia</option>
+			<option value="LDV">LDV</option>
+			<option value="Lamborghini">Lamborghini</option>
+			<option value="Land Rover">Land Rover</option>
+			<option value="Lexus">Lexus</option>
+			<option value="MG">MG</option>
+			<option value="Mahindra">Mahindra</option>
+			<option value="Maserati">Maserati</option>
+			<option value="Mazda">Mazda</option>
+			<option value="Mercedes-Benz">Mercedes-Benz</option>
+			<option value="Mini">Mini</option>
+			<option value="Mitsubishi">Mitsubishi</option>
+			<option value="Mitsubishi Fuso">Mitsubishi Fuso</option>
+			<option value="Nissan">Nissan</option>
+			<option value="Opel">Opel</option>
+			<option value="Peugeot">Peugeot</option>
+			<option value="Porsche">Porsche</option>
+			<option value="Proton">Proton</option>
+			<option value="Ram">Ram</option>
+			<option value="Renault">Renault</option>
+			<option value="Saab">Saab</option>
+			<option value="Skoda">Skoda</option>
+			<option value="Smart">Smart</option>
+			<option value="Ssangyong">Ssangyong</option>
+			<option value="Subaru">Subaru</option>
+			<option value="Suzuki">Suzuki</option>
+			<option value="Toyota">Toyota</option>
+			<option value="Volkswagen">Volkswagen</option>
+			<option value="Volvo">Volvo</option>
+		</select>
+		<input type="submit" value="Submit" class="btn btn-dark">
+	</form
+
+	
+	
+<div align="center">
+  <table class="table table-striped table-light">
+    <h1>
+      <!--Displaying the converted table-->
+      {% for table in tables %}
+      <h2>{{titles[loop.index]}}</h2>
+      {{ table|safe }}
+      {% endfor %}
+    </h1>
+  </table>
+</div>
+{% endblock %}

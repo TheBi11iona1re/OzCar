@@ -1,0 +1,39 @@
+{% extends "base.html" %}
+{% block title %}Price{% endblock %}
+{% block content %}
+<h1>&nbsp Select Price</h1>
+<form method="POST" action="{{ url_for('big_data_three') }}"style="margin-left: 20px;"> 
+    <p>Minimum Price</p>
+    <select name="minprice">
+        <option value=0>$0</option>
+        <option value=5000>$5,000</option>
+        <option value=1000>$10,000</option>
+        <option value=20000>$20,000</option>
+        <option value=30000>$30,000</option>
+        <option value=40000>$40,000</option>
+        <option value=50000>$50,000</option>
+        <option value=75000>$75,000</option>
+        <option value=100000>$100,000</option>
+        <option value=150000>$150,000</option>
+
+    </select>
+    
+    <p>Maximum Price</p>
+    <select name="maxprice">
+        <option value=5000>$5,000</option>
+        <option value=10000>$10,000</option>
+        <option value=20000>$20,000</option>
+        <option value=30000>$30,000</option>
+        <option value=40000>$40,000</option>
+        <option value=50000>$50,000</option>
+        <option value=75000>$75,000</option>
+        <option value=100000>$100,000</option>
+        <option value=150000>$150,000</option>
+        <option value=200000>$200,000</option>
+        <option value=200000>Unlimited</option>
+    </select>
+    
+    <input type="submit" value="Submit" class="btn btn-dark">
+</form>
+
+{% endblock %}

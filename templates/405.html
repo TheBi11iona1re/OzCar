@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+{% block title %}You're Not Supposed to be here!{% endblock %}
+{% block content %}
+<h1 style="margin-left: 20px;">Error 405 </h1>
+<h3 style="margin-left: 20px;">You're not supposed to be here!</h3>
+<form action="{{ url_for('big_data') }}" method="post" style="display: inline-block;">
+    <button type="submit" class="btn btn-success" style="margin-left: 20px; width: 200px;">
+        Go Back
+    </button>
+</form>
+{% endblock %}

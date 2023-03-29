@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+{% block title %}Home Page{% endblock %}
+{% block content %}
+<h1>&nbsp Ozcar Home Page</h1>
+<h4 style="margin: 20px;">Advanced Car Search Engine</h4>
+<p style="margin: 20px;">Our interactive and engaging website aims to encapsulate a range of audiences and create a universally accessible site. The internet can be cluttered with information, making it time consuming and a pest to find the right car for you. OzCar amasses hordes of information and organises, aswell as categorises, the aforementioned data into simple, quick and accurate utilities. Using 15 filters and 4 statistics among a multitude of figures and data, OzCar will find the definitively find the correct car for you, USING your own preferences. Thus finding the ideal automobile that will not only save time (and money) but also introduce an extensive database that offers aid to all needs.</p><div style="text-align: left;">
+    <form action="{{ url_for('clean_data') }}" method="post" style="display: inline-block;">
+        <button type="submit" class="btn btn-primary" style="margin-left: 20px; width: 150px;">
+            Clean Data
+        </button>
+    </form>
+
+    <form action="{{ url_for('big_data') }}" method="post" style="display: inline-block;">
+        <button type="submit" class="btn btn-danger" style="margin-left: 20px; width: 200px;">
+            View and Search Data
+        </button>
+    </form>
+    <p></p>
+    <style>
+        iframe {
+          margin-left: 20px;
+        }
+      </style>
+    <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/wL3pyCE8JRM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+{% endblock %}

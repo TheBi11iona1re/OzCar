@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+{% block title %}History{% endblock %}
+{% block content %}
+<h1>&nbsp History</h1>
+<p1>&nbsp &nbsp This is a history of cars you have looked up on this website</p1>
+
+    <table>
+        <!--Displaying the converted table-->
+        {% for table in tables %}
+            <h2>{{titles[loop.index]}}</h2>
+            {{ table|safe }}
+        {% endfor %}
+    </table>
+{% endblock %}

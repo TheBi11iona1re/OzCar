@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+{% block title %}Home Page{% endblock %}
+{% block content %}
+<h1>&nbsp Error in Statistics Retrieval</h1>
+<p1>&nbsp &nbsp You must first go to view and sort data so you can actually select the brand you want here's the link to it.</p1>
+<form action="{{ url_for('big_data') }}" method="post" style="display: inline-block;">
+    <button type="submit" class="btn btn-danger" style="margin-left: 20px; width: 200px;">
+        View and Search Data
+    </button>
+</form>
+</div>
+{% endblock %}

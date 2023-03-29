@@ -1,0 +1,48 @@
+{% extends "base.html" %}
+{% block title %}Data2{% endblock %}
+{% block content %}
+<h1>&nbsp Select Model</h1>
+<html>
+<head>
+    <form action="http://127.0.0.1:5000/big_data_twoo" method="post" style="display: inline-block;">
+		<input type="hidden" name="submit_button" value="Sort Price">
+		<button type="submit" class="btn btn-success" style="margin-left: 20px; width: 200px;"> Sort Price </button>
+	  </form>
+
+    <title>Dropdown Menu</title>
+</head>
+<body>
+    <form method="POST" style="margin-left: 20px;">
+        <label for="Model">Select a model:</label>
+        <select id="Model" name="model">
+            {% for option in options %}
+            <option value="{{ option['value'] }}">{{ option['label'] }}</option>
+            {% endfor %}
+        </select>
+        <br><br>
+        <input type="hidden" id="SelectedModel" name="selected_model">
+		<input type="submit" value="Submit" class="btn btn-dark">
+    </form>
+</body>
+
+<p style="margin: 20px;">{{ mean }}</p>
+<p style="margin: 20px;">{{ median }}</p>
+<p style="margin: 20px;">{{ mode }}</p>
+
+<div align="center">
+    <table>
+<div align="center">
+    <table>
+    <h1>
+    <!--Displaying the converted table-->
+    {% for table in tables %}
+    <h2>{{titles[loop.index]}}</h2>
+    {{ table|safe }}
+    {% endfor %}
+    </h1>
+    </table>
+    </div>
+    </body>
+    </html>
+</html>
+{% endblock %}

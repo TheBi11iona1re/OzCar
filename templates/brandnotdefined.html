@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+{% block title %}Credits{% endblock %}
+{% block content %}
+<h1>&nbsp Error</h1>
+<p>&nbsp &nbsp A brand has not been chosen, please go back </p>
+<form action="{{ url_for('big_data') }}" method="post" style="display: inline-block;">
+    <button type="submit" class="btn btn-success" style="margin-left: 20px; width: 200px;">
+        Go Back
+    </button>
+</form>
+</div>
+{% endblock %}

@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+{% block title %}Price{% endblock %}
+{% block content %}
+<h1>&nbsp Results</h1>
+<form action="http://127.0.0.1:5000/specifics" method="post" style="display: inline-block;">
+    <input type="hidden" name="warning_button" value="Sort Price">
+    <button type="submit" class="btn btn-warning" style="margin-left: 20px; width: 500px;">Need More Choices? Click this to go to Specifications</button>
+  </form>
+
+<div align="center">
+    <table>
+    <h1>
+    <!--Displaying the converted table-->
+    {% for table in tables %}
+    <h2>{{titles[loop.index]}}</h2>
+    {{ table|safe }}
+    {% endfor %}
+    </h1>
+    </table>
+    </div>
+    </body>
+    </html>
+{% endblock %}

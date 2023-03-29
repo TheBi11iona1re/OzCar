@@ -1,0 +1,34 @@
+{% extends "base.html" %}
+{% block title %}Specifications{% endblock %}
+{% block content %}
+<h1>&nbsp Specifications</h1>
+
+{% block head %}
+<title>Oz Car Find</title>
+{% endblock %}
+
+{% block body %}
+<style>
+    .main {
+        margin: 20px;
+    }
+</style>
+
+<div class="main">
+    <h3>Search filters:</h3>
+    <form action="/results" method="POST">
+        <input type="text" class="form-control" name="series" id="series" placeholder="Series"><br>
+        <input type="text" class="form-control" name="variant" id="variant" placeholder="Variant"><br>
+        <input type="text" class="form-control" name="color" id="color" placeholder="Color"><br>
+        <input type="number" class="form-control" name="year" id="year" placeholder="Year"><br>
+        <input type="text" class="form-control" name="status" id="status" placeholder="Used or New in Stock?"><br>
+        <input type="text" class="form-control" name="gearbox" id="gearbox" placeholder="Gearbox"><br>
+        <input type="text" class="form-control" name="fuel" id="fuel" placeholder="Fuel"><br>
+        <input type="number" class="form-control" name="kilometers" id="kilometers" placeholder="Maximum kilometers"><br>
+        <input type="number" class="form-control" name="cc" id="cc" placeholder="CC of the engine"><br>
+        <input type="number" class="form-control" name="seatingcapacity" id="seatingcapacity" placeholder="Seating capacity"><br>
+        <input type="submit" id="search" class="btn btn-dark" value="Search">
+    </form>
+</div>
+{% endblock %}
+{% endblock %}

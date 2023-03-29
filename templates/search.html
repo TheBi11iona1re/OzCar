@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+{% block title %}Home Page{% endblock %}
+{% block content %}
+<h2>&nbsp You Searched for... {{ searched }}</h2>
+<h3 style="margin-left: 20px;">Results</h3>
+<a href="http://127.0.0.1:5000/documentation" style="margin-left: 20px;">Documentation</a> 
+<a href="http://127.0.0.1:5000/datavisualisation" style="margin-left: 20px;">Data</a> 
+<a href="http://127.0.0.1:5000/statistics" style="margin-left: 20px;">Statistics</a> 
+<a href="http://127.0.0.1:5000/about" style="margin-left: 20px;">About</a> 
+<a href="http://127.0.0.1:5000/" style="margin-left: 20px;">Home</a> 
+{% endblock %}
